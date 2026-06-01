@@ -1,0 +1,1 @@
+SELECT 1 AS ID, 'Hello' AS Greeting, 'World' AS Target
