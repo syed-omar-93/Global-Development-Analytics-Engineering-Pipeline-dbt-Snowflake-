@@ -1,7 +1,7 @@
-This is a project to understand and explore a few development indicators of the world's 20 most populous countries.  
+# Global Development of the most populous 20 countries 
+This is a project to explore and compare  a few development indicators of the world's 20 most populous countries.  
 
-Data Sources
-
+### Data Sources
 
 This project uses publicly available datasets from the World Bank DataBank:
 
