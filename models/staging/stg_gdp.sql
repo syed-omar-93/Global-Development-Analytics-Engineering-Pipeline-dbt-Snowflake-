@@ -8,7 +8,7 @@ select
     year_number as year,
     value as gdp_per_capita
 from
-    {{ source('raw', 'gdp_raw') }}
+    {{ source('world_bank_raw', 'gdp_raw') }}
 where    
     series_name = 'GDP per capita (current US$)'
     and

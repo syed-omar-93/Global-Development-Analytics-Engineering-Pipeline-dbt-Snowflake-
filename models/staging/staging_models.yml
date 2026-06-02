@@ -1,14 +1,5 @@
 version: 2
 
-sources:
-  - name: raw
-    database: dev_db
-    schema: raw
-    tables:
-      - name: gdp_raw
-      - name: life_expectancy_raw
-      - name: population_raw
-
 models:
   - name: stg_gdp
     description: "Staging model for GDP per capita data"
@@ -16,9 +7,9 @@ models:
       - name: country
         description: "country name"
       - name: country_code
-        description: "country code"
+        description: "code of the country"
       - name: year
-        description: "year"
+        description: "year value"
       - name: gdp_per_capita
         description: "gdp per capita value"
 
@@ -27,8 +18,10 @@ models:
     columns:
       - name: country
         description: "country name"
+      - name: country_code
+        description: "code of the country"
       - name: year
-        description: "year"
+        description: "year value"
       - name: life_expectancy
         description: "life expectancy value"
 
@@ -37,7 +30,9 @@ models:
     columns:
       - name: country
         description: "country name"
+      - name: country_code
+        description: "code of the country"
       - name: year
-        description: "year"
-      - name: population
+        description: "year value"
+      - name: country_population
         description: "population value"

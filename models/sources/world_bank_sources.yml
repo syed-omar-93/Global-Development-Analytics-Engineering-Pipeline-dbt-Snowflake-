@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: world_bank_raw
+    database: dev_db
+    schema: raw
+    tables:
+      - name: gdp_raw
+      - name: life_expectancy_raw
+      - name: population_raw
+
+  - name: world_bank
+    database: dev_db
+    schema: public
+    tables:
+      - name: dim_country
+

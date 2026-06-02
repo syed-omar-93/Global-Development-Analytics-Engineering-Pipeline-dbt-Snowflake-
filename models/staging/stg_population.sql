@@ -8,7 +8,7 @@ select
     year_number as year,
     value as country_population
 from
-    {{ source('raw', 'population_raw') }}
+    {{ source('world_bank_raw', 'population_raw') }}
 where    
     series_name = 'Population, total'
     and

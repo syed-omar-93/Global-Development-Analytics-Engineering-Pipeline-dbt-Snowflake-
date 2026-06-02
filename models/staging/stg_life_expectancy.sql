@@ -8,7 +8,7 @@ select
     year_number as year,
     value as life_expectancy
 from
-    {{ source('raw', 'life_expectancy_raw') }}
+    {{ source('world_bank_raw', 'life_expectancy_raw') }}
 where    
     series_name = 'Life expectancy at birth, total (years)'
     and
