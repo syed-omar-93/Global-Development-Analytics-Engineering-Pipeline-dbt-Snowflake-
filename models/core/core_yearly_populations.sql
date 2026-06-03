@@ -15,7 +15,7 @@ with population_ranking as
     (partition by country order by year) AS population_2021,
     lag(country_population, 4) over (partition by country order by year) AS population_2020
 from 
-    dev_db.public.stg_population
+    {{ ref('stg_population') }}
 where year >= 2020 and year <= 2024
 )
 
@@ -32,8 +32,7 @@ where
     yearly_ranking = 1
     and 
     country in 
-        (select country from dev_db.public.core_most_populous_countries
-    where 
-    population_ranking >= 1 and population_ranking <= 20
+        (
+            select country from {{ ref('core_all_countries_populations') }}
     )
 order by population_2024 desc

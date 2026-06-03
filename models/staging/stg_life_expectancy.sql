@@ -6,7 +6,7 @@ select
     country_name as country,
     country_code as country_code,
     year_number as year,
-    value as life_expectancy
+    CAST(value AS FLOAT) as life_expectancy
 from
     {{ source('world_bank_raw', 'life_expectancy_raw') }}
 where    

@@ -6,7 +6,7 @@ select
     country_name as country,
     country_code as country_code,
     year_number as year,
-    value as country_population
+    CAST(value AS FLOAT) as country_population
 from
     {{ source('world_bank_raw', 'population_raw') }}
 where    

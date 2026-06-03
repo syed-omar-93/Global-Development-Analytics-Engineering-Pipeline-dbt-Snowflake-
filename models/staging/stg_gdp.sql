@@ -6,7 +6,7 @@ select
     country_name as country,
     country_code as country_code,
     year_number as year,
-    value as gdp_per_capita
+    CAST(value AS FLOAT) as gdp_per_capita
 from
     {{ source('world_bank_raw', 'gdp_raw') }}
 where    
