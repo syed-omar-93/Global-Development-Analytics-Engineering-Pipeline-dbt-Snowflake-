@@ -16,3 +16,10 @@ Databases:
 World Development Indicators,
 Health Nutrition and population statistics 
 
+### Pipeline layers
+
+Ingestion → loading the raw data into the database 
+Staging → cleaning the raw data
+Core → standardising + filtering to the last 5 years
+Marts → applying business logic by filtering for the 20 most populous countries
+
