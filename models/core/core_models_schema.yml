@@ -108,3 +108,57 @@ models:
         description: "GDP per capita of the country in 2020"
         tests:
           - not_null
+
+  - name: core_all_countries_life_expectancies
+    description: "All countries and their life expectancies based on the most recent figures"
+    columns:
+      - name: country
+        description: "country name"
+        tests:
+          - not_null
+          - unique
+          - relationships:
+             arguments: 
+               to: ref('stg_life_expectancy')
+               field: country
+      - name: life_expectancy
+        description: "Life expectancy of the country based on the most recent year's data"
+        tests:
+          - not_null
+      - name: life_expectancy_ranking
+        description: "Ranking of each country based on its most recent life expectancy"
+        tests:
+          - not_null
+
+  - name: core_yearly_life_expectancies
+    description: "Yearly life expectancies for countries from 2020 to 2024"
+    columns:
+      - name: country
+        description: "country name"
+        tests:
+          - not_null
+          - unique
+          - relationships:
+             arguments: 
+               to: ref('stg_life_expectancy')
+               field: country
+      - name: life_expectancy_2024
+        description: "life expectancy of the country in 2024"
+        tests:
+          - not_null
+      - name: life_expectancy_2023
+        description: "life expectancy of the country in 2023"
+        tests:
+          - not_null
+      - name: life_expectancy_2022
+        description: "life expectancy of the country in 2022"
+        tests:
+          - not_null
+      - name: life_expectancy_2021
+        description: "life expectancy of the country in 2021"
+        tests:
+          - not_null
+      - name: life_expectancy_2020
+        description: "life expectancy of the country in 2020"
+        tests:
+          - not_null
