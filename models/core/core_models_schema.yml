@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: core_all_countries_populations
-    description: "Model to identify all countries and their populations based on the most recent data"
+    description: "All countries and their populations based on the most recent data"
     columns:
       - name: country
         description: "country name"
@@ -14,12 +14,16 @@ models:
               to: ref('stg_population')
               field: country
       - name: country_population 
-        description: "population of the country based on 2024 data"
+        description: "Population of the country based on 2024 data"
+        tests:
+          - not_null
       - name: population_ranking
-        description: "ranking of the country based on population in 2024"
+        description: "Ranking of each country based on its most recent population"
+        tests:
+          - not_null
 
   - name: core_yearly_populations
-    description: "Model calculating the population each year for the most populous countries from 2020 to 2024"
+    description: "Yearly populations for countries from 2020 to 2024"
     columns:
       - name: country
         description: "country name"
@@ -32,13 +36,75 @@ models:
                field: country
       - name: population_2024
         description: "population of the country in 2024"
+        tests:
+          - not_null
       - name: population_2023
         description: "population of the country in 2023"
+        tests:
+          - not_null
       - name: population_2022
-        description: "population of the country in 2022"                      
+        description: "population of the country in 2022"
+        tests:
+          - not_null
       - name: population_2021
         description: "population of the country in 2021"
+        tests:
+          - not_null
       - name: population_2020
         description: "population of the country in 2020"
+        tests:
+          - not_null
 
+  - name: core_all_countries_gdp_per_capita
+    description: "All countries and their GDP per capita based on the most recent figures"
+    columns:
+      - name: country
+        description: "country name"
+        tests:
+          - not_null
+          - unique
+          - relationships:
+             arguments: 
+               to: ref('stg_gdp')
+               field: country
+      - name: gdp_per_capita
+        description: "GDP per capita of the country based on the most recent year's data"
+        tests:
+          - not_null
+      - name: gdp_per_capita_ranking
+        description: "Ranking of each country based on its most recent GDP per capita"
+        tests:
+          - not_null
 
+  - name: core_yearly_gdp_per_capitas
+    description: "Yearly GDP per capita for countries from 2020 to 2024"
+    columns:
+      - name: country
+        description: "country name"
+        tests:
+          - not_null
+          - unique
+          - relationships:
+             arguments: 
+               to: ref('stg_gdp')
+               field: country
+      - name: gdp_per_capita_2024
+        description: "GDP per capita of the country in 2024"
+        tests:
+          - not_null
+      - name: gdp_per_capita_2023
+        description: "GDP per capita of the country in 2023"
+        tests:
+          - not_null
+      - name: gdp_per_capita_2022
+        description: "GDP per capita of the country in 2022"
+        tests:
+          - not_null
+      - name: gdp_per_capita_2021
+        description: "GDP per capita of the country in 2021"
+        tests:
+          - not_null
+      - name: gdp_per_capita_2020
+        description: "GDP per capita of the country in 2020"
+        tests:
+          - not_null

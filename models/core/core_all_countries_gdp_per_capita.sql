@@ -5,7 +5,7 @@ select country,
 year, 
 gdp_per_capita,
 row_number() over (partition by country order by year desc) as year_ranking
-from dev_db.public.stg_gdp
+from {{ ref ('stg_gdp') }}
 where gdp_per_capita is not null 
 )
 
@@ -17,6 +17,6 @@ row_number() over (order by gdp_per_capita desc) as gdp_per_capita_ranking
 from CTE_latest_gdp_per_capita
 where
 country in
-(select country_name from dev_db.public.dim_country)
+(select country_name from {{ source('world_bank', 'dim_country') }})
 and 
 year_ranking = 1 
