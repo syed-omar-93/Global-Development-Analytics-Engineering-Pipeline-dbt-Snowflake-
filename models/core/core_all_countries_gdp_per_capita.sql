@@ -1,7 +1,8 @@
 /* GDP per capita of each country for the latest year*/
 with CTE_latest_gdp_per_capita
 as (
-select country, 
+select 
+country, 
 year, 
 gdp_per_capita,
 row_number() over (partition by country order by year desc) as year_ranking
