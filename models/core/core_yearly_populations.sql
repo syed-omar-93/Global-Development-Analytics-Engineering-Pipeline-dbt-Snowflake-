@@ -32,7 +32,7 @@ where
     yearly_ranking = 1
     and 
     country in 
-        (
-            select country from {{ ref('core_all_countries_populations') }}
-    )
+        (select country_name from {{ source('world_bank', 'dim_country') }})
+    and 
+    population_2024 is not null
 order by population_2024 desc
