@@ -2,10 +2,10 @@ version: 2
 
 models:
   - name: core_all_countries_populations
-    description: "All countries and their populations based on the most recent data"
+    description: "Core model for all countries and their populations based on the most recent figures"
     columns:
       - name: country
-        description: "country name"
+        description: "Name of the country"
         tests:
           - not_null
           - unique  
@@ -18,15 +18,15 @@ models:
         tests:
           - not_null
       - name: population_ranking
-        description: "Ranking of each country based on its most recent population"
+        description: "Ranking of each country based on its 2024 population"
         tests:
           - not_null
 
   - name: core_yearly_populations
-    description: "Yearly populations for countries from 2020 to 2024"
+    description: "Core model for yearly populations for countries from 2020 to 2024"
     columns:
       - name: country
-        description: "country name"
+        description: "Name of the country"
         tests:
           - not_null
           - unique
@@ -56,10 +56,10 @@ models:
           - not_null
 
   - name: core_all_countries_gdp_per_capita
-    description: "All countries and their GDP per capita based on the most recent figures"
+    description: "Core model for all countries and their GDP per capita based on the most recent figures"
     columns:
       - name: country
-        description: "country name"
+        description: "Name of the country"
         tests:
           - not_null
           - unique
@@ -77,10 +77,10 @@ models:
           - not_null
 
   - name: core_yearly_gdp_per_capitas
-    description: "Yearly GDP per capita for countries from 2020 to 2024"
+    description: "Core model for yearly GDP per capita for countries from 2020 to 2024"
     columns:
       - name: country
-        description: "country name"
+        description: "Name of the country"
         tests:
           - not_null
           - unique
@@ -110,10 +110,10 @@ models:
           - not_null
 
   - name: core_all_countries_life_expectancies
-    description: "All countries and their life expectancies based on the most recent figures"
+    description: "Core model for all countries and their life expectancies based on the most recent figures"
     columns:
       - name: country
-        description: "country name"
+        description: "Name of the country"
         tests:
           - not_null
           - unique
@@ -131,10 +131,10 @@ models:
           - not_null
 
   - name: core_yearly_life_expectancies
-    description: "Yearly life expectancies for countries from 2020 to 2024"
+    description: "Core model for yearly life expectancies for countries from 2020 to 2024"
     columns:
       - name: country
-        description: "country name"
+        description: "Name of the country"
         tests:
           - not_null
           - unique
@@ -143,22 +143,24 @@ models:
                to: ref('stg_life_expectancy')
                field: country
       - name: life_expectancy_2024
-        description: "life expectancy of the country in 2024"
+        description: "Life expectancy of the country in 2024"
         tests:
           - not_null
       - name: life_expectancy_2023
-        description: "life expectancy of the country in 2023"
+        description: "Life expectancy of the country in 2023"
         tests:
           - not_null
       - name: life_expectancy_2022
-        description: "life expectancy of the country in 2022"
+        description: "Life expectancy of the country in 2022"
         tests:
           - not_null
       - name: life_expectancy_2021
-        description: "life expectancy of the country in 2021"
+        description: "Life expectancy of the country in 2021"
         tests:
           - not_null
       - name: life_expectancy_2020
-        description: "life expectancy of the country in 2020"
+        description: "Life expectancy of the country in 2020"
         tests:
           - not_null
+
+

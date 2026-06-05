@@ -6,12 +6,62 @@ sources:
     schema: raw
     tables:
       - name: gdp_raw
+        description: "Gross Domestic Product (GDP) data from the World Bank"
+        columns:
+          - name: country_name
+            description: "Name of the country"
+          - name: country_code
+            description: "Code of the country"
+          - name: series_name
+            description: "Name of the series (e.g., GDP per capita)"
+          - name: series_code
+            description: "Code of the series (e.g., NY.GDP.PCAP.CD)"
+          - name: year_number
+            description: "Year value"
+          - name: value
+            description: "GDP per capita value for the given country and year"
       - name: life_expectancy_raw
+        description: "Life Expectancy data from the World Bank"
+        columns:
+          - name: country_name
+            description: "Name of the country"
+          - name: country_code
+            description: "Code of the country"
+          - name: series_name
+            description: "Name of the series (e.g., Life Expectancy)"
+          - name: series_code
+            description: "Code of the series (e.g., SP.DYN.LE00.IN)"
+          - name: year_number
+            description: "Year value"
+          - name: value
+            description: "Life expectancy value for the given country and year"
       - name: population_raw
+        description: "Population data from the World Bank"
+        columns:
+          - name: country_name
+            description: "Name of the country"
+          - name: country_code
+            description: "Code of the country"
+          - name: series_name
+            description: "Name of the series (e.g., Population)"
+          - name: series_code
+            description: "Code of the series (e.g., SP.POP.TOTL)"
+          - name: year_number
+            description: "Year value"
+          - name: value
+            description: "Population value for the given country and year"
 
   - name: world_bank
     database: dev_db
     schema: public
     tables:
       - name: dim_country
+        description: "Dimension table for countries, including country codes and names"
+        columns:
+          - name: country_name
+            description: "Name of the country"
+          - name: country_code
+            description: "Code of the country"
+          - name: continent
+            description: "Continent to which the country belongs (e.g., Asia, Europe)"  
 

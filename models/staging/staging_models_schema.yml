@@ -5,53 +5,53 @@ models:
     description: "Staging model for GDP per capita data"
     columns:
       - name: country
-        description: "country name"
+        description: "Name of the country"
         data_tests:
           - not_null
       - name: country_code
-        description: "code of the country"
+        description: "Code of the country"
         data_tests:
           - not_null
       - name: year
-        description: "year value"
+        description: "Year value"
         data_tests:
           - not_null
       - name: gdp_per_capita
-        description: "gdp per capita value"
+        description: "GDP per capita value"
 
   - name: stg_life_expectancy
     description: "Staging model for life expectancy data"
     columns:
       - name: country
-        description: "country name"
+        description: "Name of the country"
         data_tests:
           - not_null
       - name: country_code
-        description: "code of the country"
+        description: "Code of the country"
         data_tests:
           - not_null
       - name: year
-        description: "year value"
+        description: "Year value"
         data_tests:
           - not_null
       - name: life_expectancy
-        description: "life expectancy value"
+        description: "Life expectancy value"
 
   - name: stg_population
     description: "Staging model for population data"
     columns:
       - name: country
-        description: "country name"
+        description: "Name of the country"
         data_tests:
           - not_null
       - name: country_code
-        description: "code of the country"
+        description: "Code of the country"
         data_tests:
           - not_null
       - name: year
-        description: "year value"
+        description: "Year value"
         data_tests:
           - not_null
       - name: country_population
-        description: "population value"
+        description: "Population value"
 
