@@ -12,4 +12,4 @@ from
 where    
     series_name = 'Population, total'
     and
-    country_code is not null
+    country_code is not null 
