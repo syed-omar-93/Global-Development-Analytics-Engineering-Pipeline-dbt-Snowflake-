@@ -1,0 +1,122 @@
+version: 2
+
+models:
+  - name: marts_gdp_per_capita_final 
+    description: "Final model for all countries and their GDP per capita based on the most recent figures"
+    columns:
+      - name: country
+        description: "Name of the country"
+        tests:
+          - not_null
+          - unique  
+          - relationships:
+             arguments:
+              to: ref('core_all_countries_gdp_per_capita')
+              field: country
+      - name: population_2024_ranking 
+        description: "Ranking of the country based on its 2024 population"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+      - name: gdp_per_capita_2024
+        description: "GDP per capita of the country in 2024"
+        tests:
+          - not_null
+      - name: gdp_per_capita_2023
+        description: "GDP per capita of the country in 2023"
+        tests:
+          - not_null
+      - name: gdp_per_capita_2022
+        description: "GDP per capita of the country in 2022"
+        tests:
+          - not_null
+      - name: gdp_per_capita_2021
+        description: "GDP per capita of the country in 2021"
+        tests:
+          - not_null
+      - name: gdp_per_capita_2020
+        description: "GDP per capita of the country in 2020"  
+        tests:
+          - not_null
+
+  - name: marts_life_expectancy_final
+    description: "Final model for all countries and their life expectancy based on the most recent figures"
+    columns:
+      - name: country
+        description: "Name of the country"
+        tests:
+          - not_null
+          - unique
+          - relationships:
+             arguments: 
+               to: ref('core_all_countries_life_expectancies')
+               field: country
+      - name: population_2024_ranking
+        description: "Ranking of the country based on its 2024 population"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+      - name: life_expectancy_2024
+        description: "life expectancy of the country in 2024"
+        tests:
+          - not_null
+      - name: life_expectancy_2023
+        description: "life expectancy of the country in 2023"
+        tests:
+          - not_null
+      - name: life_expectancy_2022
+        description: "life expectancy of the country in 2022"
+        tests:
+          - not_null
+      - name: life_expectancy_2021
+        description: "life expectancy of the country in 2021"
+        tests:
+          - not_null
+      - name: life_expectancy_2020
+        description: "life expectancy of the country in 2020"
+        tests:
+          - not_null
+
+  - name: marts_populations_final
+    description: "Final model for all countries and their populations based on the most recent figures"
+    columns:
+      - name: country
+        description: "Name of the country"
+        tests:
+          - not_null
+          - unique
+          - relationships:
+             arguments: 
+               to: ref('core_all_countries_populations')
+               field: country
+      - name: population_2024_ranking
+        description: "Ranking of the country based on its 2024 population"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+      - name: population_2024
+        description: "Population of the country in 2024"
+        tests:
+          - not_null
+      - name: population_2023
+        description: "Population of the country in 2023"
+        tests:
+          - not_null
+      - name: population_2022
+        description: "Population of the country in 2022"
+        tests:
+          - not_null
+      - name: population_2021
+        description: "Population of the country in 2021"
+        tests:
+          - not_null
+      - name: population_2020
+        description: "Population of the country in 2020"
+        tests:
+          - not_null 

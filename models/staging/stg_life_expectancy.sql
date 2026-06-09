@@ -3,7 +3,10 @@
 ) }}
 
 select
-    country_name as country,
+    case 
+        when country_name = 'Viet Nam' then 'Vietnam'
+        else country_name
+    end as country,
     country_code as country_code,
     year_number as year,
     CAST(value AS FLOAT) as life_expectancy
