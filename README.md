@@ -113,14 +113,23 @@ The sources are highlighted in green while the models are in light blue.
 The workflow below summarises the main steps followed from start to finish — from ingesting raw data to building the final marts and analysing the results.
 
 •	Ingest raw CSV files into Snowflake.
+
 •	Define raw sources in dbt.
+
 •	Build staging models to clean, standardise and structure the raw data.
+
 •	Build core models to filter all indicators to the last five years (2020 to 2024).
-•	Build marts models to identify the 20 most populous countries and apply business logic. 
+
+•	Build marts models to identify the 20 most populous countries and apply business logic.
+
 •	Add schema tests and custom tests to ensure data quality and integrity. 
-•	Generate documentation and the lineage graph using dbt docs. 
+
+•	Generate documentation and the lineage graph using dbt docs.
+
 •	Version control the project using Git and GitHub.
-•	Load the final marts tables into Power BI for analysis. 
+
+•	Load the final marts tables into Power BI for analysis.
+
 •	Analyse and visualise the data to answer the business questions and uncover insights. 
 
 ### How to run this project 
