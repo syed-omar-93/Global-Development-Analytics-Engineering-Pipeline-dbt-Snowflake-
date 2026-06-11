@@ -12,45 +12,71 @@ This project aims to answer:
 
 
 •	Which countries have seen the biggest rise in GDP per capita, life expectancy, and population over the last five years?
+
 •	How does population growth compare across the world’s 20 most populous countries?
+
 •	Is there a relationship between GDP per capita and life expectancy?
+
 •	Which countries have the fastest declining populations?
+
 •	Which countries have the fastest growing populations?
 
-### Tech Stack & Languages Used
+### Tools & platforms
 
 •	dbt Core
-•	SQL
-•	YAML
-•	Jinja
+
 •	Snowflake
+
 •	Git & GitHub
+
 •	Visual Studio Code
+
+### Languages & Formats
+
+•	SQL
+
+•	YAML
+
+•	Jinja
 
 ### Data Sources 
 
 This project uses publicly available datasets from the World Bank DataBank:
+
 •	GDP per capita (NY.GDP.PCAP.CD): Annual GDP per capita values for all countries and regions (2000–2024).
+
 •	Life expectancy at birth (SP.DYN.LE00.IN): Annual life expectancy values for all countries and regions (2000–2024).
+
 •	Population, total (SP.POP.TOTL): Annual population counts for all countries and regions (2000–2024).
+
 Sources: https://databank.worldbank.org/source 
+
 Databases: World Development Indicators, Health Nutrition and Population Statistics
 
 ### Model Architecture (Ingestion → RAW → STAGING → CORE → MARTS)
 
 •	Ingestion — Loading the raw CSV files into Snowflake
+
 •	RAW — Storing the unmodified source data exactly as received
+
 •	Staging — Cleaning, renaming, typing, and defining sources
+
 •	Core — Standardising and filtering the data to the last five years
+
 •	Marts — Applying business logic to identify the 20 most populous countries
 
 ### Final Marts Tables
 
 1. marts_gdp_per_capita_final
+
 GDP per capita values for the 20 most populous countries from 2020–2024, allowing analysis of year on year economic growth and comparisons across countries.
+
 2. marts_life_expectancy_final
+
 Life expectancy values for the same 20 countries from 2020–2024, supporting health trend analysis.
+
 3. marts_populations_final
+
 Population totals for the 20 countries from 2020–2024, including population rankings and annual population counts, allowing calculation of population growth rates and identification of fast-growing or declining countries.
 
 ### Intended Analysis
@@ -62,10 +88,15 @@ The dim_country table acts as a reference dimension table, containing clean and 
 ### Data Quality Tests 
 
 The following dbt tests were implemented:
+
 •	not_null
+
 •	unique
+
 •	accepted_values
+
 •	relationships
+
 These tests ensure data completeness, consistency, and referential integrity. By referential integrity, this means that all the key relationships between models are valid and every referenced country in the cleaned and transformed tables exist in the source table.
 Custom SQL tests were also created to validate population rankings and life expectancy ranges.
 
@@ -73,6 +104,7 @@ Custom SQL tests were also created to validate population rankings and life expe
 
 A full Directed Acyclic Graph (DAG) is generated using dbt Docs, showing the flow of data from the sources to the relevant staging models then to the core models and then to the final mart models. This is shown below. 
 The sources are highlighted in green while the models are in light blue. 
+
 <img width="1332" height="544" alt="Lineage graph" src="https://github.com/user-attachments/assets/f1cdf59a-e6e3-4000-8cbc-0d60d89a91b3" />
 
 
