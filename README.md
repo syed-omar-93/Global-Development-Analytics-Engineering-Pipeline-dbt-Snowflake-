@@ -67,15 +67,15 @@ Databases: World Development Indicators, Health Nutrition and Population Statist
 
 ### Final Marts Tables
 
-1. marts_gdp_per_capita_final
+- marts_gdp_per_capita_final
 
 GDP per capita values for the 20 most populous countries from 2020–2024, allowing analysis of year on year economic growth and comparisons across countries.
 
-2. marts_life_expectancy_final
+- marts_life_expectancy_final
 
 Life expectancy values for the same 20 countries from 2020–2024, supporting health trend analysis.
 
-3. marts_populations_final
+- marts_populations_final
 
 Population totals for the 20 countries from 2020–2024, including population rankings and annual population counts, allowing calculation of population growth rates and identification of fast-growing or declining countries.
 
