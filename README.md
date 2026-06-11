@@ -152,9 +152,13 @@ The steps below show how to set up the environment, run the dbt pipeline, and re
 The items below describe potential key opportunities for future development:
 
 •	Add additional development indicators (literacy rates, healthcare access, electricity access, clean water access, infant mortality).
+
 •	Introduce incremental models and snapshots.
+
 •	Implement CI/CD for automated testing and deployment.
+
 •	Automate ingestion using tools such as Airbyte or Fivetran.
+
 •	Schedule the pipeline to refresh automatically when new data becomes available.
 
 
