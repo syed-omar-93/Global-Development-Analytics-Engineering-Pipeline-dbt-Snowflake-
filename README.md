@@ -9,6 +9,8 @@ The final curated datasets cover the last five years (2020–2024) and will be u
 ### Business Questions
 
 This project aims to answer:
+
+
 •	Which countries have seen the biggest rise in GDP per capita, life expectancy, and population over the last five years?
 •	How does population growth compare across the world’s 20 most populous countries?
 •	Is there a relationship between GDP per capita and life expectancy?
