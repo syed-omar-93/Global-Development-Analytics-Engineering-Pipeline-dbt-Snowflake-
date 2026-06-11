@@ -82,7 +82,9 @@ Population totals for the 20 countries from 2020–2024, including population ra
 ### Intended Analysis
 
 The final marts tables will be used to analyse development trends across the world’s 20 most populous countries. The analysis will highlight growth patterns, compare economic and health outcomes, and identify countries showing strong or weak improvements across multiple indicators.
+
 The twenty most populous countries were selected because they represent a large share of the world’s population and provide a diverse mix of economic and social contexts. This scope allows for meaningful comparisons while keeping the analysis focused and manageable.
+
 The dim_country table acts as a reference dimension table, containing clean and curated metadata about countries. Because it is already consistent and reliable, it is used directly in the core and marts layers without additional modelling. This keeps the project simple and avoids unnecessary modelling complexity.
 
 ### Data Quality Tests 
