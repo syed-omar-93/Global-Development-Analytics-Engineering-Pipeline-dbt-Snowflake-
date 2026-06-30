@@ -4,22 +4,7 @@
 
 This project analyses key development indicators for the world’s 20 most populous countries. Using raw datasets from the World Bank (GDP per capita, life expectancy, and population), the project applies a modern Analytics Engineering workflow using dbt Core and Snowflake to transform messy CSV files into clean and analysis ready data sets.
 
-The final curated datasets cover the last five years (2020–2024) and will be used in Power BI to explore development trends, compare countries, and answer the project’s business questions.
-
-### Business Questions
-
-This project aims to answer:
-
-
-•	Which countries have seen the biggest rise in GDP per capita, life expectancy, and population over the last five years?
-
-•	How does population growth compare across the world’s 20 most populous countries?
-
-•	Is there a relationship between GDP per capita and life expectancy?
-
-•	Which countries have the fastest declining populations?
-
-•	Which countries have the fastest growing populations?
+The final curated datasets cover the last five years (2020–2024) and are used in Power BI to explore development trends, compare countries, and answer the project’s core analytical questions (please refer to the dashboard README inside the analyses folder to see what these questions are).
 
 ### Tools & platforms
 
@@ -53,17 +38,17 @@ Sources: https://databank.worldbank.org/source
 
 Databases: World Development Indicators, Health Nutrition and Population Statistics
 
-### Model Architecture (Ingestion → RAW → STAGING → CORE → MARTS)
+### Model Architecture (Ingestion → Raw → Staging → Core → Marts)
 
-•	Ingestion — Loading the raw CSV files into Snowflake
+•	Ingestion: Loading the raw CSV files into Snowflake
 
-•	RAW — Storing the unmodified source data exactly as received
+•	Raw: Storing the unmodified source data exactly as received
 
-•	Staging — Cleaning, renaming, typing, and defining sources
+•	Staging: Cleaning, renaming, typing, and defining sources
 
-•	Core — Standardising and filtering the data to the last five years
+•	Core: Standardising and filtering the data to the last five years
 
-•	Marts — Applying business logic to identify the 20 most populous countries
+•	Marts: Applying business logic to identify the 20 most populous countries
 
 ### Final Marts Tables
 
@@ -73,17 +58,15 @@ GDP per capita values for the 20 most populous countries from 2020–2024, allow
 
 - marts_life_expectancy_final
 
-Life expectancy values for the same 20 countries from 2020–2024, supporting health trend analysis.
+Life expectancy values for the same 20 countries from 2020 to 2024, supporting analysis of life expectancy data.
 
 - marts_populations_final
 
-Population totals for the 20 countries from 2020–2024, including population rankings and annual population counts, allowing calculation of population growth rates and identification of fast-growing or declining countries.
+Population totals for the 20 countries from 2020 to 2024, including population rankings and annual population counts. These support calculations of population growth rates and identification of countries with the fastest‑growing and fastest‑declining populations.
 
 ### Intended Analysis
 
-The final marts tables will be used to analyse development trends across the world’s 20 most populous countries. The analysis will highlight growth patterns, compare economic and health outcomes, and identify countries showing strong or weak improvements across multiple indicators.
-
-The twenty most populous countries were selected because they represent a large share of the world’s population and provide a diverse mix of economic and social contexts. This scope allows for meaningful comparisons while keeping the analysis focused and manageable.
+The final marts tables are used to analyse development and population trends across the world’s 20 most populous countries.
 
 The dim_country table acts as a reference dimension table, containing clean and curated metadata about countries. Because it is already consistent and reliable, it is used directly in the core and marts layers without additional modelling. This keeps the project simple and avoids unnecessary modelling complexity.
 
