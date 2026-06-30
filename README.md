@@ -1,4 +1,4 @@
-# Global Development of the most populous 20 countries (In progress)
+# Global Development of the most populous 20 countries 
 
 ### Project Overview 
 
