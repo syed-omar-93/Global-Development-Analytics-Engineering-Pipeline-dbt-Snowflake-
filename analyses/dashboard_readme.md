@@ -1,4 +1,6 @@
-# Dashboard Overview: Development Trends of the World’s 20 Most Populous Countries
+# Global Development Project dashboard 
+
+### Dashboard Overview
 This dashboard explores two key development indicators and one demographic indicator for the world’s twenty most populous countries between 2020 and 2024. These are: 
 •	GDP per capita
 •	Life expectancy
