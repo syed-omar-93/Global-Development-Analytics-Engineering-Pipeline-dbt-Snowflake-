@@ -22,7 +22,7 @@ The key insights from this project are as follows:
 
 GDP per capita growth (2020–2024)
 
-The strongest increases in GDP per capita were observed in these countries:
+The strongest increases in GDP per capita from 2020 to 2024 were observed in these countries:
 
 •	Türkiye (+80.6%)
 
@@ -36,7 +36,7 @@ Countries with notable declines in GDP per capita include:
 
 •	Japan (–18.8%)
 
-All other countries experienced positive GDP per capita growth.
+All other countries experienced positive GDP per capita growth during this period.
 
 Life expectancy trends
 
@@ -68,9 +68,7 @@ Countries with declining populations include:
 
 Relationship between GDP per Capita and Life Expectancy
 
-The scatter plots for both 2020 and 2024 show a clear positive correlation:
-
-Countries with higher GDP per capita generally tend to have a higher life expectancy. This relationship is consistent across both years and is clearly illustrated in the dashboard’s comparative scatter plots.
+The scatter plots for both 2020 and 2024 show a clear positive correlation. This indicates that countries with higher GDP per capita generally tend to have a higher life expectancy. This relationship is consistent across both years and is clearly illustrated in the dashboard’s comparative scatter plots.
 
 ### Dashboard navigation 
 The dashboard includes several usability features:
@@ -78,4 +76,18 @@ The dashboard includes several usability features:
 •	Page navigation buttons at the top of every page for easy movement between pages.
 
 •	A single select country filter on the Yearly Trends page, allowing focused analysis of individual countries.
+
+### Data Sources 
+
+This project uses publicly available datasets from the World Bank DataBank:
+
+•	GDP per capita (NY.GDP.PCAP.CD): Annual GDP per capita values for all countries and regions (2000–2024).
+
+•	Life expectancy at birth (SP.DYN.LE00.IN): Annual life expectancy values for all countries and regions (2000–2024).
+
+•	Population, total (SP.POP.TOTL): Annual population counts for all countries and regions (2000–2024).
+
+Sources: https://data.worldbank.org/
+
+Databases: World Development Indicators, Health Nutrition and Population Statistics
 
