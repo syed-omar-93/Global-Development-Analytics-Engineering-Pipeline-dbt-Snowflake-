@@ -72,8 +72,6 @@ The scatter plots for both 2020 and 2024 show a clear positive correlation:
 
 Countries with higher GDP per capita generally tend to have a higher life expectancy. This relationship is consistent across both years and is clearly illustrated in the dashboard’s comparative scatter plots.
 
-Relationship Between GDP per Capita and Life Expectancy
-
 ### Dashboard navigation 
 The dashboard includes several usability features:
 
