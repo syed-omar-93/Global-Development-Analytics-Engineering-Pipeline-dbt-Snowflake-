@@ -34,7 +34,7 @@ This project uses publicly available datasets from the World Bank DataBank:
 
 •	Population, total (SP.POP.TOTL): Annual population counts for all countries and regions (2000–2024).
 
-Sources: https://databank.worldbank.org/source 
+Sources: https://data.worldbank.org/
 
 Databases: World Development Indicators, Health Nutrition and Population Statistics
 
