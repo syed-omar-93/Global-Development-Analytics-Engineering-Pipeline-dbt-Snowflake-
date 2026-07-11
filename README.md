@@ -26,7 +26,7 @@ The final curated datasets cover the last five years (2020–2024) and are used 
 
 ### Data Sources 
 
-This project uses publicly available datasets from the World Bank DataBank:
+This project uses publicly available datasets from the World Bank DataBank, sourced from the World Development Indicators and Health Nutrition and Population Statistics databases.
 
 •	GDP per capita (NY.GDP.PCAP.CD): Annual GDP per capita values for all countries and regions (2000–2024).
 
@@ -34,9 +34,7 @@ This project uses publicly available datasets from the World Bank DataBank:
 
 •	Population, total (SP.POP.TOTL): Annual population counts for all countries and regions (2000–2024).
 
-Sources: https://data.worldbank.org/
-
-Databases: World Development Indicators, Health Nutrition and Population Statistics
+Source: https://data.worldbank.org/
 
 ### Model Architecture (Ingestion → Raw → Staging → Core → Marts)
 
