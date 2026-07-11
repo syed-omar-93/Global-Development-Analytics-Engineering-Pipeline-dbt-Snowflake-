@@ -40,9 +40,9 @@ Source: https://data.worldbank.org/
 
 •	Ingestion: Loading the raw CSV files into Snowflake
 
-•	Raw: Storing the unmodified source data exactly as received
+•	Raw: Storing the source data exactly as obtained
 
-•	Staging: Cleaning, renaming, typing, and defining sources
+•	Staging: Cleaning, renaming, and defining sources
 
 •	Core: Standardising and filtering the data to the last five years
 
@@ -66,7 +66,7 @@ Population totals for the 20 countries from 2020 to 2024, including population r
 
 The final marts tables are used to analyse development and population trends across the world’s 20 most populous countries.
 
-The dim_country table acts as a reference dimension table, containing clean and curated metadata about countries. Because it is already consistent and reliable, it is used directly in the core and marts layers without additional modelling. This keeps the project simple and avoids unnecessary modelling complexity.
+The dim_country table acts as a reference dimension table, containing clean and curated metadata about countries. Because it is already consistent and reliable, it is used directly in the core and marts layers without additional modelling. This keeps the project simple and avoids unnecessary complexity.
 
 ### Data Quality Tests 
 
@@ -80,7 +80,7 @@ The following dbt tests were implemented:
 
 •	relationships
 
-These tests ensure data completeness, consistency, and referential integrity. By referential integrity, this means that all the key relationships between models are valid and every referenced country in the cleaned and transformed tables exist in the source table.
+These tests ensure data completeness, consistency, and referential integrity. By referential integrity, this means that all the key relationships between models are valid and every referenced country in the cleaned and transformed tables exists in the source table.
 Custom SQL tests were also created to validate population rankings and life expectancy ranges.
 
 ### Lineage Graph 
@@ -135,12 +135,6 @@ The steps below show how to set up the environment, run the dbt pipeline, and re
 The items below describe potential key opportunities for future development:
 
 •	Add additional development indicators (literacy rates, healthcare access, electricity access, clean water access, infant mortality).
-
-•	Introduce incremental models and snapshots.
-
-•	Implement CI/CD for automated testing and deployment.
-
-•	Automate ingestion using tools such as Airbyte or Fivetran.
 
 •	Schedule the pipeline to refresh automatically when new data becomes available.
 
