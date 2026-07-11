@@ -20,35 +20,7 @@ Key analytical questions addressed include:
 
 The key insights from this project are as follows: 
 
-GDP per capita growth (2020–2024)
-
-The strongest increases in GDP per capita from 2020 to 2024 were observed in these countries:
-
-•	Türkiye (+80.6%)
-
-•	Mexico (+60.5%)
-
-•	Russia (+47.3%)
-
-Countries with notable declines in GDP per capita include:
-
-•	Nigeria (–61.2%)
-
-•	Japan (–18.8%)
-
-All other countries experienced positive GDP per capita growth during this period.
-
-Life expectancy trends
-
-Countries showing the largest improvements in life expectancy:
-
-•	Mexico (+7.1%)
-
-•	Bangladesh (+5.6%)
-
-•	Nigeria (+3.8%)
-
-Population growth
+#### Population changes
 
 Countries with the fastest growing populations are the following:
 
@@ -66,7 +38,35 @@ Countries with declining populations include:
 
 •	China (–0.2%)
 
-Relationship between GDP per Capita and Life Expectancy
+#### GDP per capita changes 
+
+The strongest increases in GDP per capita from 2020 to 2024 were observed in these countries:
+
+•	Türkiye (+80.6%)
+
+•	Mexico (+60.5%)
+
+•	Russia (+47.3%)
+
+Countries with notable declines in GDP per capita include:
+
+•	Nigeria (–61.2%)
+
+•	Japan (–18.8%)
+
+All other countries experienced positive GDP per capita growth during this period.
+
+#### Life expectancy changes 
+
+Countries showing the largest improvements in life expectancy:
+
+•	Mexico (+7.1%)
+
+•	Bangladesh (+5.6%)
+
+•	Nigeria (+3.8%)
+
+#### Relationship between GDP per Capita and Life Expectancy
 
 The scatter plots for both 2020 and 2024 show a clear positive correlation. This indicates that countries with higher GDP per capita generally tend to have a higher life expectancy. This relationship is consistent across both years and is clearly illustrated in the dashboard’s comparative scatter plots.
 
@@ -79,7 +79,7 @@ The dashboard includes several usability features:
 
 ### Data Sources 
 
-This project uses publicly available datasets from the World Bank DataBank:
+This project uses publicly available datasets from the World Bank DataBank, sourced from the World Development Indicators and Health Nutrition and Population Statistics databases.
 
 •	GDP per capita (NY.GDP.PCAP.CD): Annual GDP per capita values for all countries and regions (2000–2024).
 
@@ -88,6 +88,4 @@ This project uses publicly available datasets from the World Bank DataBank:
 •	Population, total (SP.POP.TOTL): Annual population counts for all countries and regions (2000–2024).
 
 Sources: https://data.worldbank.org/
-
-Databases: World Development Indicators, Health Nutrition and Population Statistics
 
